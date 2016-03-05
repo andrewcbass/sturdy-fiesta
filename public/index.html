@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Express</title>
+  <script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="style.css">
+  <script src="main.js"></script>
+
+  <body>
+    <div class="header">
+    <h1>Get things done!</h1>
+    <input type="text" placeholder='add task' id='newTask'>
+    <input type="date" id='taskDate'>
+    <button id='addTodo'> Add to do!</button>
+  </div>
+
+  <table>
+    <thead>
+      <th>Task</th>
+      <th>Due Date</th>
+      <th>complete?</th>
+      <th>remove</th>
+    </thead>
+    <tbody id="todoTable"></tbody>
+    <tr id="template">
+      <td class="desc">buy eggs</td>
+      <td class="dueDate">tomorrow</td>
+      <td>
+        <input type="checkbox" class="complete">
+      </td>
+      <td class="remove">
+        <button type="button" class="btn btn-danger btn-xs">
+          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+        </button>
+
+      </td>
+    </tr>
+  </table>
+
+</head>
+</body>
+</html>

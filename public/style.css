@@ -1,0 +1,40 @@
+body {
+  background: #0FA257;
+  text-align: center;
+}
+
+
+
+th {
+  border: 2px solid black;
+  text-align: left;
+  font-weight: bold;
+  padding: 4px;
+}
+
+td, tr {
+  border: 1px solid black;
+  height: 30px;
+  width: 100px;
+}
+
+table {
+  text-align: center;
+  border-collapse:  collapse;
+  border: 1px solid black;
+  background-color: white;
+  margin: 0px auto;
+}
+
+.header {
+  margin-bottom:  10px;
+}
+
+#template {
+  display: none;
+}
+
+.complete {
+  background: #AFADAD;
+  opacity: 0.5;
+}
