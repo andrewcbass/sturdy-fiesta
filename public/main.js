@@ -72,7 +72,7 @@ function addTodo() {
 
 
 function removeTodo() {
-  var indexV = $(this).parent('tr').index();
+  var indexX = $(this).parent('tr').index();
   $(this).parent('tr').remove();
 
 
@@ -80,7 +80,7 @@ function removeTodo() {
     url: '/todos/:index',
     method: 'DELETE',
     data: {
-      index: indexV
+      index: indexX
     },
     success: function(data) {
       console.log('deleted from server');
@@ -123,12 +123,3 @@ function updateComplete() {
     },
   });
 }
-
-
-
-
-
-
-
-
-//

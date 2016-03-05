@@ -17,29 +17,31 @@
     <button id='addTodo'> Add to do!</button>
   </div>
 
-  <table>
-    <thead>
-      <th>Task</th>
-      <th>Due Date</th>
-      <th>complete?</th>
-      <th>remove</th>
-    </thead>
-    <tbody id="todoTable"></tbody>
-    <tr id="template">
-      <td class="desc">buy eggs</td>
-      <td class="dueDate">tomorrow</td>
-      <td>
-        <input type="checkbox" class="complete">
-      </td>
-      <td class="remove">
-        <button type="button" class="btn btn-danger btn-xs">
-          <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
-        </button>
-
-      </td>
-    </tr>
-  </table>
-
+  <div class="container">
+    <div class="row col-xs-12">
+      <table class="table table-condensed">
+        <thead>
+          <th>Task</th>
+          <th>Due Date</th>
+          <th>complete?</th>
+          <th>remove</th>
+        </thead>
+        <tbody id="todoTable"></tbody>
+        <tr id="template">
+          <td class="desc">buy eggs</td>
+          <td class="dueDate">tomorrow</td>
+          <td>
+            <input type="checkbox" class="complete">
+          </td>
+          <td class="remove">
+            <button type="button" class="btn btn-danger btn-xs">
+              <span class="glyphicon glyphicon-remove" aria-hidden="true"></span>
+            </button>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
 </head>
 </body>
 </html>
