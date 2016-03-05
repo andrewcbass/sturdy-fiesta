@@ -17,10 +17,6 @@ app.use(bodyParser.urlencoded({
 }));
 app.use(bodyParser.json());
 
-//respond with all the todos in database
-/* 1. read json file
-   2. parse data into array
-   3. send the data  */
 
 app.get('/todos', function(req, res) {
   fs.readFile('./todos.json', function(err, data) {
@@ -77,34 +73,3 @@ var server = http.createServer(app);
 server.listen(PORT, function() {
   console.log(`Servin' it up all day long at port ${PORT}`);
 });
-// app.get('/test', function(req, res) {
-//   console.log(req.query.index);
-//   res.send('GET to /test');
-// });
-
-
-
-//####################push new name into array##################
-// app.post('/names', function(req, res, next) {
-//   fs.readFile('./names.json', function(err, data) {
-//
-//     var names = JSON.parse(data);
-//     names.push(req.body.newName);
-//
-//     fs.writeFile('./names.json', JSON.stringify(names), function(err) {
-//       console.log('done');
-//       res.send();
-//     })
-//
-//   })
-// })
-//
-//
-
-
-// //Middleware
-//
-// function(req, res, next) {
-//   res.setHeader(....)
-//   next();
-// });
