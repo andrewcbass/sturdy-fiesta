@@ -9,6 +9,7 @@ function init() {
   $('#todoTable').on('click', '.complete', updateComplete)
 }
 
+//load stored todos on page visit
 function getAllTodos() {
 
   $.ajax({
@@ -36,6 +37,7 @@ function getAllTodos() {
 
 }
 
+//add new todo on page, and post to server
 function addTodo() {
   var todo = $('#newTask').val();
 
@@ -70,7 +72,7 @@ function addTodo() {
   });
 }
 
-
+//remove a todo file from page and from server
 function removeTodo(e) {
   e.stopPropagation();
   var indexX = $(this).parent('tr').index();
@@ -84,7 +86,7 @@ function removeTodo(e) {
       index: indexX
     },
     success: function(data) {
-      console.log('deleted from server');
+      console.log('Deleted from server');
     },
     error: function(err) {
       console.log('ERR', err);
@@ -92,10 +94,10 @@ function removeTodo(e) {
   });
 }
 
-
+//on click of checkbox, update json with status
 function updateComplete() {
   var status = $(this).prop('checked');
-  console.log('STATUS', status);
+
 
   if (status) {
     $(this).parent().parent().addClass('complete');
@@ -104,9 +106,7 @@ function updateComplete() {
     status = "false";
   }
 
-
   var indexS = $(this).parent().parent().index();
-  console.log('INDEXS', indexS);
 
   $.ajax({
     url: '/todos/:index',
