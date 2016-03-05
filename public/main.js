@@ -71,7 +71,8 @@ function addTodo() {
 }
 
 
-function removeTodo() {
+function removeTodo(e) {
+  e.stopPropagation();
   var indexX = $(this).parent('tr').index();
   $(this).parent('tr').remove();
 
